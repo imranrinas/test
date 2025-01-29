@@ -20,7 +20,7 @@
         header {
             background: linear-gradient(270deg, #000000, #000000, #000000);
             background-size: 600% 600%;
-            padding: 15px 40px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,7 +39,7 @@
         }
 
         header .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             color: #ffffff;
         }
@@ -49,7 +49,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         header nav ul li a {
@@ -85,14 +85,14 @@
         }
 
         .hero h1 {
-            font-size: 64px;
+            font-size: 48px;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 40px;
             position: relative;
             z-index: 1;
@@ -101,8 +101,8 @@
         .hero button {
             background: #7aff9c;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 12px 24px;
+            font-size: 16px;
             font-weight: 600;
             color: #000;
             cursor: pointer;
@@ -119,14 +119,14 @@
 
         /* Courses Section */
         .courses {
-            padding: 80px 40px;
+            padding: 60px 20px;
             text-align: center;
             background: #1a1a1a;
         }
 
         .courses h2 {
-            font-size: 48px;
-            margin-bottom: 40px;
+            font-size: 36px;
+            margin-bottom: 30px;
             color: #7aff9c;
         }
 
@@ -135,20 +135,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
         }
 
         .category-switcher .arrow {
-            font-size: 32px;
+            font-size: 24px;
             cursor: pointer;
             color: #7aff9c;
-            margin: 0 20px;
+            margin: 0 15px;
             transition: color 0.3s, transform 0.3s;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -162,12 +162,12 @@
 
         .category-switcher .dots {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .category-switcher .dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background: #7aff9c;
             border-radius: 50%;
             cursor: pointer;
@@ -186,7 +186,7 @@
         /* Category Title */
         .category-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(90deg, #7aff9c, #00b4ff, #ff00ff);
@@ -204,15 +204,15 @@
         /* Course Grid */
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .course-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 20px;
+            padding: 15px;
             text-align: left;
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -228,25 +228,25 @@
         }
 
         .course-card h3 {
-            font-size: 24px;
-            margin: 20px 0 10px;
+            font-size: 20px;
+            margin: 15px 0 10px;
         }
 
         .course-card p {
-            font-size: 16px;
+            font-size: 14px;
             color: #ccc;
         }
 
         .course-card button {
             background: #7aff9c;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 8px 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #000;
             cursor: pointer;
             border-radius: 50px;
-            margin-top: 20px;
+            margin-top: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -260,17 +260,108 @@
             background: #000;
             color: #7aff9c;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         footer p {
             margin: 0;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 15px;
+            }
+
+            header .logo {
+                font-size: 20px;
+            }
+
+            header nav ul {
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .courses {
+                padding: 40px 15px;
+            }
+
+            .courses h2 {
+                font-size: 28px;
+            }
+
+            .category-switcher .arrow {
+                font-size: 20px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .category-title {
+                font-size: 24px;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .course-card h3 {
+                font-size: 18px;
+            }
+
+            .course-card p {
+                font-size: 12px;
+            }
+
+            .course-card button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .courses h2 {
+                font-size: 24px;
+            }
+
+            .category-title {
+                font-size: 20px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -285,7 +376,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="#" style="margin-right: 20px;">..</a></li>
+                <li><a href="#" style="margin-right: 20px;">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -362,7 +453,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 DAHR Institute. All rights reserved.</p>
+        <p>&copy; 2023 DAHR Institute. All rights reserved.</p>
     </footer>
 
     <script>
