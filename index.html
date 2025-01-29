@@ -44,7 +44,28 @@
             color: #ffffff;
         }
 
-        header nav ul {
+        header .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* Navigation */
+        nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
@@ -52,15 +73,15 @@
             gap: 15px;
         }
 
-        header nav ul li a {
+        nav ul li a {
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
 
-        header nav ul li a:hover {
-            color: #fff;
+        nav ul li a:hover {
+            color: #7aff9c;
         }
 
         /* Hero Section */
@@ -283,8 +304,28 @@
                 font-size: 20px;
             }
 
-            header nav ul {
-                gap: 10px;
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgba(0, 0, 0, 0.9);
+                border-radius: 10px;
+                padding: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
             }
 
             .hero h1 {
@@ -338,11 +379,6 @@
         }
 
         @media (max-width: 480px) {
-            header nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .hero h1 {
                 font-size: 28px;
             }
@@ -371,12 +407,20 @@
         <div class="logo">
             <img src="Screenshot_34-removebg-preview.png"
                  alt="DAHR Institute Logo" 
-                 style="height: 50px; width: auto;"></div>
+                 style="height: 50px; width: auto;">
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- Navigation -->
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="#" style="margin-right: 20px;">About Us</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -457,6 +501,14 @@
     </footer>
 
     <script>
+        // JavaScript for Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
         // JavaScript for Category Switcher
         const dots = document.querySelectorAll('.dot');
         const courseCards = document.querySelectorAll('.course-card');
